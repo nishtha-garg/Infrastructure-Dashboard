@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/index-css.css">
+    <link rel="stylesheet" href="styles/jquery.mobile-1.4.5.min.css">
+
+    <script type="text/javascript" src="libs/jquery-1.11.3.min.js"></script>    
+    <script type="text/javascript" src="libs/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript" src="libs/dataframe.js"></script>
+    <script type="text/javascript" src="libs/chart.js"></script>
+
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="controller/Dataset.js"></script>
+    <script type="text/javascript" src="controller/AbstractFactoryInfrastructure.js"></script>
+    <script type="text/javascript" src="controller/ConcreteInfrastructure.js"></script>
+    <script type="text/javascript" src="controller/AbstractRegion.js"></script>
+    <script type="text/javascript" src="controller/AbstractCategory.js"></script>
+
+    <script type="text/javascript" src="controller/Iterator.js"></script>
+    <script type="text/javascript" src="controller/ConcreteIterator.js"></script>
+    <script type="text/javascript" src="controller/Color.js"></script>
+    <script type="text/javascript" src="controller/ConcreteColor.js"></script>
+
+    <script type="text/javascript" src="controller/NumericFilterStrategy.js"></script>
+    <script type="text/javascript" src="controller/FunctionContext.js"></script>
+    <script type="text/javascript" src="controller/ConcreteStrategySum.js"></script>
+    <script type="text/javascript" src="controller/ConcreteStrategyAverage.js"></script>
+
+    <script type="text/javascript" src="controller/Region.js"></script>
+    <script type="text/javascript" src="controller/Category.js"></script>
+    <script type="text/javascript" src="controller/Filename.js"></script>
+    <script type="text/javascript" src="controller/ChartConfiguration.js"></script>
+    <script type="text/javascript" src="controller/LineChart.js"></script>
+    <script type="text/javascript" src="controller/PieChart.js"></script>
+    <script type="text/javascript" src="controller/BarChart.js"></script>
+    <script type="text/javascript" src="controller/StackChart.js"></script>
+    <script type="text/javascript" src="controller/DoughnutChart.js"></script>
+    <script type="text/javascript" src="controller/ChartFactory.js"></script>
+    <script type="text/javascript" src="controller/Dashboard.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">INFRASTRUCTURE </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row-fluid">
+        <div class="col-md-8">
+            <label>
+                <h3>
+					<span class="label label-default">Select Region</span>
+				</h3>
+            </label>
+        </div>
+
+        <div class="col-md-4">        </div>
+    </div>
+
+    <div class="row-fluid col-md-12">
+
+        <div class="panel panel-default col-md-4">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a> Technology</a>
+                </h4>
+            </div>
+            <div class="panel-body">
+                <div>
+                    <ul>
+                        <li>
+                            <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Technology','eastasia');">East Asia</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Technology','europe')">Europe</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Technology','latinamerica')">Latin America</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Technology','northamerica')">North America</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Technology','southasia')">South Asia</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default col-md-4">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a> Telecommunication</a>
+                </h4>
+            </div>
+            <div class="panel-body">
+                <ul>
+
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Telecommunication','eastasia');">East Asia</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Telecommunication','europe');">Europe</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Telecommunication','latinamerica');">Latin America</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Telecommunication','northamerica');">North America</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Telecommunication','southasia');">South Asia</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel panel-default col-md-4">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a> Transportation</a>
+                </h4>
+            </div>
+
+            <div class="panel-body">
+                <ul>
+
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Transport','eastasia');">East Asia</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Transport','europe');">Europe</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Transport','latinamerica');">Latin America</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Transport','northamerica');">North America</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" onClick="new Dashboard().loadDataset('Transport','southasia');">South Asia</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid col-md-12">
+
+        <label>
+            <h3>
+			<span class="label label-default">Data</span>
+		</h3></label>
+        <div class="row-fluid well col-md-8" align="center" style="overflow: auto; height: 800px; margin: 2em auto;">
+            <div id="divTable"></div>
+        </div>
+
+        <div class="panel-group col-md-4" id="accordion1" style="margin: 2em auto;">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse5"> Please Select the Data Labels (Columns)</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse in">
+                    <div class="panel-body">
+
+                        <div class="checkBoxLabel well" id="checkLabels" align="left" style="overflow:auto; height: auto; margin: 2em auto;"></div>
+
+                        <input type="button" id="applyButton1" value="Apply" onclick="new Dashboard().selectLabels()" class="btn btn-primary" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row-fluid col-md-12">
+        <div class="panel-group col-md-6" id="accordion3" align="center" style="margin: 2em auto;">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse7"> Category Filter</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                        <label>Select Country</label>
+
+                        <div class="checkBoxLabel well" id="checkCountry" align="left" style="overflow:auto; height: auto; margin: 2em auto;"></div>
+                        
+                        <label>Select Year</label>
+                        <div>
+                            <select id="selectYear"></select>
+                        </div>
+
+                        <input type="button" id="applyFilterButton" value="Apply Filters" onclick="new Dashboard().applyFilter()" class="btn btn-primary" />
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="panel-group col-md-6" id="accordion9" align="center" style="margin: 2em auto;">
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion9" href="#collapse99"> Charts</a>
+                </h4>
+            </div>
+            <div id="collapse99" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <ul>
+                                <input class="" type="radio" name="chart" id="line" onclick="new Dashboard().drawChart(this.id)">Line Chart
+                                <br>
+                                <input class="" type="radio" name="chart" id="pie" onclick="new Dashboard().drawChart(this.id)">Pie Chart
+                                <br>
+                                <input class="" type="radio" name="chart" id="bar" onclick="new Dashboard().drawChart(this.id)">Bar Chart
+                                <br>
+                                <input class="" type="radio" name="chart" id="doughnut" onclick="new Dashboard().drawChart(this.id)">Doughnut Chart
+                                <br>
+                                <input class="" type="radio" name="chart" id="stack" onclick="new Dashboard().drawChart(this.id)">Stacked Chart
+                                <br>
+                            </ul>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        <div class="panel-group col-md-6" id="accordion3" align="center" style="margin: 2em auto;">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse9"> Numerical Filter</a>
+                    </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                        <div class="row col-md-4" align="center">
+                        <label for="sel1">Select Function :</label>
+                            <select name="selectFunction" id="selectFunction" class="dropdown" onchange="new Dashboard().selectAggregationFunction()">
+                                <option value="" selected>Select</option>
+                                <option value="Sum">Sum</option>
+                                <option value="Average">Average</option>
+                                <option value="Min">Minimum</option>
+                                <option value="Max">Maximum</option>
+                            </select>
+
+                            <label for="sel1">Select Label (Column) :</label>
+                            <select class="dropdown" name="category1" id="category1">
+                                <option value="">Select</option>
+                            </select>
+
+                        
+                            <input type="button" id="applyNumFilterButton" value="Apply Filters" onclick="new Dashboard().applyNumericFilter()" class="btn btn-primary" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div class="row">
+        <div id="canvas">
+            <canvas id="linechart"></canvas>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="love">
+                <p>Made by Team 14</p>
+                <p>&copy; Spring 2017 <a href="#">CSP 586</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
