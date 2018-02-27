@@ -1,0 +1,138 @@
+
+
+/*TABLE CSS GOES HERE*/
+body {
+	background-color: #fef3fa;
+}
+canvas{
+
+        width : 1200px !important;
+        margin : 15px auto !important;
+        height : 500px !important;
+    }
+table  {
+  width: 50%;
+  border: 2px solid black;
+  margin: 65px -5px 0px 0px;
+}
+
+tr
+{
+  border: 2px solid black;
+}
+
+th, td
+{
+  text-align: center;
+  padding: 8px;
+
+}
+
+.header h1{
+  background-color: darkcyan;
+  margin: -8px 0px 0px 0px;
+}
+
+.third-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.third-level-menu > li
+{
+    height: 30px;
+    background: darkcyan;
+}
+.third-level-menu > li:hover { background:cadetblue; }
+
+.second-level-menu
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    background: darkcyan;
+}
+.second-level-menu > li:hover { background: cadetblue; }
+
+.top-level-menu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-level-menu > li
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background: darkcyan;
+}
+.top-level-menu > li:hover { background: cadetblue; }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+.top-level-menu a:hover { color: #000000; }
+
+.button b
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+	    height: 30px;
+    background: darkcyan;
+}
+.col-centered {
+display:inline-block;
+float:none;
+/* reset the text-align */
+text-align:left;
+/* inline-block space fix */
+margin-right:-4px;
+}
+.button b:hover{background:cadetblue; }
+ul {
+  list-style-type: none;
+}
