@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+class Color {
+    constructor() {
+    }
+
+    CreateIterator (){
+    }
+}

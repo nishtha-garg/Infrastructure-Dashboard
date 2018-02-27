@@ -1,0 +1,9 @@
+class NumericFilterStrategy {
+	
+	constructor() {
+	}
+	
+	FunctionImplement() {
+		
+	}
+}
